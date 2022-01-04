@@ -1,0 +1,126 @@
+/* (https://fonts.google.com/specimen/Outfit) */
+
+:root {
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Very-dark-blue-main: hsl(217, 54%, 11%);
+    --Very-dark-blue-card: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Outfit",Arial, Helvetica, sans-serif;
+    background-color: var(--Very-dark-blue-main);
+}
+a {
+    text-decoration: none;
+    color: var(--White);
+}
+a:hover {
+    color: var(--Cyan);
+}
+
+#card {
+    width: 340px;
+    border-radius: 4%;
+    background-color: var(--Very-dark-blue-card);
+    margin: 10vh auto 5vh;
+    padding: 25px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+}
+
+.card-image-container {
+   height: 270px;
+   border-radius: 4%;
+   background: url("../images/image-equilibrium.jpg");
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+.card-image-container:hover {
+    background: linear-gradient(hsla(178, 100%, 50%,0.5),hsla(178, 100%, 50%, 0.55)),url("../images/image-equilibrium.jpg");
+    background-size: cover;
+}
+
+#view-icon {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+#view-icon:hover {
+  background: url(../images/icon-view.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+h3 a{
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+#card p {
+    color: var(--Soft-blue);
+}
+.card-details > p {
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+.current-value {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 0;  
+}
+.current-value p {
+    display: flex;
+    align-items: center; 
+}
+.current-value p span {
+    margin-left: 7px;
+}
+
+#ethereum span {
+    color: var(--Cyan);
+}
+
+hr {
+    border: none;
+    border-top: 2px solid var( --Very-dark-blue-line);
+}
+
+footer  {
+    display: flex;
+    align-items: center;
+    padding: 15px 0 0;
+}
+footer img {
+    width: 40px;
+    border: 2px solid var(--White);
+    border-radius: 100%;
+    margin-right: 15px;
+}
+
+@media (max-width:375px){
+    #card {
+        width: 90%;
+        padding: 20px;
+    }
+}
+
+@media (max-width:305px){
+    #card {
+        padding: 15px;
+    }
+    footer p {
+        font-size: 0.9rem ;
+    }
+    .card-image-container {
+        height: 230px;
+     }
+}
